@@ -20,9 +20,14 @@ export class MakeTripPage implements OnInit {
 
   ngOnInit() {
     this.bookingForm = this.fb.group({
-      name: [''],
-      email: [''],
-      mobile: ['']
+      user: [''],
+      placeFrom: [''],
+      placeTo: [''],
+      dateFrom: [''],
+      dateTo: [''],
+      grades: [''], 
+      trad: [''],
+      price: [''],
     })
   }
 

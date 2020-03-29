@@ -12,6 +12,16 @@
       Appointments
     </ion-list-header>
 
+    <ion-button routerLinkActive="tab-selected" routerLink="/home" class="ios" tab="home">
+      <ion-icon name="list-box"></ion-icon>
+      <ion-label>Trips</ion-label>
+    </ion-button>
+
+    <ion-button routerLinkActive="tab-selected" routerLink="/make-trip" class="ios" tab="make-trip">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Search trips</ion-label>
+    </ion-button>
+
     <ion-item *ngFor="let booking of Bookings" class="user-list">
       <ion-label>
         <h5>

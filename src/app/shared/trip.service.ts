@@ -16,9 +16,14 @@ export class TripService {
   // Create
   createBooking(apt: Trip) {
     return this.bookingListRef.push({
-      name: apt.name,
-      email: apt.email,
-      mobile: apt.mobile
+      user: apt.user,
+      placeFrom: apt.placeFrom,
+      placeTo: apt.placeTo,
+      dateFrom: apt.dateFrom,
+      dateTo: apt.dateTo,
+      grades: apt.grades, 
+      trad: apt.trad,
+      price: apt.price,
     })
   }
 
@@ -37,9 +42,14 @@ export class TripService {
   // Update
   updateBooking(id, apt: Trip) {
     return this.bookingRef.update({
-      name: apt.name,
-      email: apt.email,
-      mobile: apt.mobile
+      user: apt.user,
+      placeFrom: apt.placeFrom,
+      placeTo: apt.placeTo,
+      dateFrom: apt.dateFrom,
+      dateTo: apt.dateTo,
+      grades: apt.grades, 
+      trad: apt.trad,
+      price: apt.price,
     })
   }
 
