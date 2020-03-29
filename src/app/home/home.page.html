@@ -25,10 +25,26 @@
     <ion-item *ngFor="let booking of Bookings" class="user-list">
       <ion-label>
         <h5>
-          <ion-icon name="person"></ion-icon> {{booking.name}}
+          <ion-icon name="person"></ion-icon> {{booking.user}}
         </h5>
         <p>
-          <ion-icon name="call"></ion-icon> {{booking.mobile}}
+          <ion-icon name="call"></ion-icon> {{booking.placeFrom}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.placeTo}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.dateFrom}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.dateTo}}
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.grades.lower}} - {{booking.grades.upper}} 
+          <span *ngIf = "booking.trad === true">TRAD</span>
+        </p>
+        <p>
+          <ion-icon name="call"></ion-icon> {{booking.price}}$
         </p>
       </ion-label>
 

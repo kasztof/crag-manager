@@ -27,9 +27,14 @@ export class EditTripPage implements OnInit {
 
   ngOnInit() {
     this.updateBookingForm = this.fb.group({
-      name: [''],
-      email: [''],
-      mobile: ['']
+      user: [''],
+      placeFrom: [''],
+      placeTo: [''],
+      dateFrom: [''],
+      dateTo: [''],
+      grades: [''], 
+      trad: [''],
+      price: [''],
     })
     console.log(this.updateBookingForm.value)
   }

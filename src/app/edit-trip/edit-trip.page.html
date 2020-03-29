@@ -10,25 +10,55 @@
   <ion-list lines="full">
     <form [formGroup]="updateBookingForm" (ngSubmit)="updateForm()">
       <ion-item>
-        <ion-label position="floating">Name</ion-label>
-        <ion-input formControlName="name" type="text" required></ion-input>
+        <ion-label position="floating">User</ion-label>
+        <ion-input formControlName="user" type="text" required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input formControlName="email" type="text" required>
+        <ion-label position="floating">Place from</ion-label>
+        <ion-input formControlName="placeFrom" type="text" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Mobile</ion-label>
-        <ion-input formControlName="mobile" type="text" required>
+        <ion-label position="floating">Place to</ion-label>
+        <ion-input formControlName="placeTo" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>Date from</ion-label>
+        <ion-datetime formControlName="dateFrom"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>Date to</ion-label>
+        <ion-datetime formControlName="dateTo"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Grades</ion-label>
+        <ion-range formControlName="grades" dual-knobs pin color="dark">
+          <ion-icon slot="start" size="small" name="brush"></ion-icon>
+          <ion-icon slot="end" name="brush"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Trad</ion-label>
+        <ion-checkbox formControlName="trad" type="checkbox" required>
+        </ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-input formControlName="price" type="text" required>
         </ion-input>
       </ion-item>
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" shape="full" expand="block">Update Appointment</ion-button>
+          <ion-button type="submit" color="primary" shape="full" expand="block">Book Trip</ion-button>
         </ion-col>
       </ion-row>
     </form>
